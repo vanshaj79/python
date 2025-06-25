@@ -3,9 +3,10 @@ import time
 
 def cache(func):
     cache_value = {}
-    print(cache_value)
+    # print(f"cache_value : {cache_value}")
 
     def wrapper(*args):
+        print(f"cache_value : {cache_value}")
         if args in cache_value:
             return cache_value[args]
         result = func(*args)
@@ -21,6 +22,10 @@ def long_running_function(a, b):
     return a + b
 
 
+print(long_running_function(2, 3))
+print(long_running_function(2, 3))
+print(long_running_function(2, 3))
+print(long_running_function(2, 3))
 print(long_running_function(2, 3))
 print(long_running_function(2, 3))
 
