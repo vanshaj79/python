@@ -47,3 +47,17 @@ print(tea_shop)
 print(tea_shop["chai"])
 
 print(tea_shop["chai"]["masala"])
+
+# Dictionary comprehension
+squared_num = {x: x**2 for x in range(6)}
+print(squared_num)
+
+# to clear the dictionary
+squared_num.clear()
+print(squared_num)
+
+keys = ["masala", "ginger", "lemon"]
+default_value = "delicious"
+
+new_dict = dict.fromkeys(keys, default_value)
+print(new_dict)
